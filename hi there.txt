@@ -1,0 +1,2 @@
+If you want to actually learn how to use the source code and the bot and such, then you need to read the HTML file. 
+Run the help command on the bot, and view the last section of the HTML file.
