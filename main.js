@@ -2,15 +2,14 @@ const Client = require('discord.js');
 const Discord = require('discord.js');
 const MessageAttachment = require('discord.js');
 const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"] });
-const prefix = '-';
+const prefix = "-"
 const cheerio = require('cheerio');
-const request = require('got');
+const request = require('request');
 const fs = require('fs');
 require("dotenv").config();
 const replace = require('replace-in-file');
 const guildID = '820016164763598909'
 const ms = require('ms');
-client.login('');
 
 const statusList = ["nothing!", "your mom", "epic gaming games", "Sonic CD", "Ultra rich billionare rich money simulator",
     "Who Asked Tycoon", "nothing, get lost.", "Sonic the Hedghehog (2006)", "Playing Playing Playing Playing Playing", "MineCrap",
@@ -335,4 +334,6 @@ client.on('message', message => {
         client.commands.get('controls').execute(message, args, client, Discord, statusList, client);
     }
 
-}); 
+});
+
+client.login(`${process.env.DISCORD_TOKEN}`);
