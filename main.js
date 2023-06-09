@@ -4,19 +4,18 @@ const MessageAttachment = require('discord.js');
 const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"] });
 const prefix = '-';
 const cheerio = require('cheerio');
-const request = require('request');
+const request = require('got');
 const fs = require('fs');
-const mongoose = require('mongoose');
 require("dotenv").config();
 const replace = require('replace-in-file');
 const guildID = '820016164763598909'
 const ms = require('ms');
-client.login('yourtokenhere');
+client.login('');
 
 const statusList = ["nothing!", "your mom", "epic gaming games", "Sonic CD", "Ultra rich billionare rich money simulator",
-    "Who Asked Tycoon", "nothing, get lost.", "Sonic the Hedghehog (2006) :skull:", "Playing Playing Playing Playing Playing", "MineCrap",
-    "Deltarune", "Minecraft", "Spotify", "Shitty Tycoon games on Roblox", "Sonic Mania", "your dad", "Half Life - Source", "Desert Bus for the Sega CD", "Sonic's Schoolhouse", "Sonic Generations", "joe nuts", "with your balls :troll:",
-    "RPCS3", "Cemu", "with me balls"]
+    "Who Asked Tycoon", "nothing, get lost.", "Sonic the Hedghehog (2006)", "Playing Playing Playing Playing Playing", "MineCrap",
+    "Deltarune", "Minecraft", "Spotify", "Breaking Bad Tycoon on Roblox", "Sonic Mania", "your dad", "Half Life - Source", "Desert Bus for the Sega CD", "Sonic's Schoolhouse", "Sonic Generations", "joe nuts", "with your balls :troll:",
+    "RPCS3", "Cemu", "with me balls", ""]
 
 
 
