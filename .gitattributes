@@ -1,3 +1,4 @@
+node_modules/images-scraper/node_modules/puppeteer/.local-chromium/win64-1022525/chrome-win/chrome.dll filter=lfs diff=lfs merge=lfs -text
 *.env filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 *.md filter=lfs diff=lfs merge=lfs -text
