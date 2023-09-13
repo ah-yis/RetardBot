@@ -1,2 +1,3 @@
-If you want to actually learn how to use the source code and the bot and such, then you need to read the HTML file. 
-Run the help command on the bot, and view the last section of the HTML file.
+version https://git-lfs.github.com/spec/v1
+oid sha256:80c84136b51193249bc8946c00b90cb274573c1f0556b806e6f54dfd368d2fc4
+size 194

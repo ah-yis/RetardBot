@@ -1,20 +1,3 @@
-const {Discord} = require("discord.js")
-
-
-
-module.exports = {
-    name: 'changestatus',
-    description: "ppsize",
-    execute(message, args, Discord, statusList, client){
-        const messageSender = message.author.id;
-
-        const randomMess = statusList[Math.floor(Math.random() * statusList.length)];
-
-        if (messageSender ==  526767441548673025){
-            client.user.setActivity(randomMess);
-            message.react("👍");
-        } else {
-            message.channel.send("You aren't 'ah yis' therefore you are not allowed to do this.");
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7600d5f268375e2fd0239ce753db0931e36d6648debeb463f792fadb0ada6c55
+size 596

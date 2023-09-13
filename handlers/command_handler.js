@@ -1,14 +1,3 @@
-const fs = require('fs');
-
-module.exports = (client, Discord) => {
-    const command_files = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-
-    for (const file of command_files) {
-        const command = require(`../commands/${file}`);
-        if (command.name) {
-            client.commands.set(command.name, command);
-        } else {
-            continue;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4973056dff858d93a7007dc5be3d5c35185ef43bd72b99b0a77e0fc2dd2381af
+size 411

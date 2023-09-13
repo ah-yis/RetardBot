@@ -1,29 +1,3 @@
-const Discord = require("discord.js")
-const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]});
-const path = require("path")
-
-module.exports = {
-    name: 'covenantdance',
-    description: "This command bans a member!",
-    execute(message, args){
-        const { voice } = message.member
-
-        if (!voice.channelID){
-            message.reply('you aint in a voice channel noob')
-            return
-        }
-
-        voice.channel.join().then((connection) => {
-            connection.play('cuvanentdance.mp3')
-        })
-    }
-}
-
-
-
-
-
-
-
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:612bd99d44f4c19a8547b0cbb4101b5d676fd60b03d01555f1e3240c3be50eeb
+size 596

@@ -1,10 +1,3 @@
-const { MessageAttachment } = require("discord.js")
-
-module.exports = {
-    name: 'cmds',
-    description: "retarded",
-    aliases: ['help', 'commands'],
-    async execute(client, message, args) {
-        message.channel.send(`${message.author}, check out the website for information: https://ah-yis.github.io/RetardBot/`)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:35422071c5cb71d8cfa6179dd657edb7891b2b82ff6bd1bb0580d9d42d135cd9
+size 339

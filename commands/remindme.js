@@ -1,33 +1,3 @@
-const { MessageManager } = require("discord.js")
-const ms = require('ms');
-
-module.exports = {
-    name: 'remindme',
-    description: "remind me lmao",
-    execute(message, args){
-        let time = args[0]
-
-        if (!time){
-            return message.channel.send("when i tell you noob")
-        }
-
-        const reminder = args.join(" ").slice(args[0].length);
-
-        if (reminder){
-            if(!args[1]){
-                return message.channel.send("specify a reminder bro")
-            }
-
-            message.channel.send(`lmao i set the reminder ig i remind u after ${time}`)
-        }
-
-        setTimeout(function(){
-            message.channel.send(`${message.author}, bro ur reminder or some shit,${reminder}`)
-        }, ms(time));
-    }
-}
-
-
-
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fb977acd1ad70bf4f3ea1a2cf383a4b4a47659622d0dbdf6472e63fa266dcd7
+size 795

@@ -1,21 +1,3 @@
-const { Client, Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS] });
-
-const path = require('path');
-
-module.exports = {
-    name: 'allstar',
-    description: 'This command bans a member!',
-    execute(message, args) {
-        const { voice } = message.member;
-
-        if (!voice.channelID) {
-            message.reply('you ain\'t in a voice channel noob');
-            return;
-        }
-
-        voice.channel.join().then((connection) => {
-            connection.play('allstar.mp3');
-        });
-    }
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cf5d73b5fbaf3a7b636a49f12847e7cd94ff9dc38fd4dcb681cb0b037e7636e
+size 642

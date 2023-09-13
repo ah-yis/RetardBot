@@ -1,22 +1,3 @@
-const {Discord} = require("discord.js")
-
-
-
-module.exports = {
-    name: 'drawacock',
-    description: "ppsize",
-    execute(message, args, Discord){
-        const messageSender = message.author.id;
-        const lenghtOfCock = Math.floor(Math.random() * 20);
-        const messageToSend = "8" + "=".repeat(lenghtOfCock) + "D";
-
-        if (messageSender == 526767441548673025, 725683510697918484){ // Big
-            message.channel.send("8============================================================================D");
-        }else if (messageSender == 878349699004923915){ // Small
-            message.channel.send("8D");
-        } else {
-            message.channel.send(messageToSend)
-        }
-       
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c4ba854d7d695ec77f8fd2c7057a832d40a2438db3edf8fa434e4dd33864cbb0
+size 737
