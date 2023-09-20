@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:683433c96244ab877b167786b306c39b2acee0682d5b76bc4b92fd2dffc07ee7
-size 311
+const { MessageAttachment } = require("discord.js")
+
+module.exports = {
+    name: 'sickoreoimage',
+    description: "retarded",
+    execute(message, args){
+        const botFileAttachment = new MessageAttachment('./IMG_1029.jpeg')
+        message.channel.send(message.author, botFileAttachment)
+    }
+}

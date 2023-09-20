@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d46896661fd48a8b7ca4a8c927114c9cf19ae952cfd5b1d788319229ca8099b
-size 512
+const fs = require('fs');
+
+module.exports = (client, Discord) => {
+    const load_dir = (dirs) => {
+        const event_files = fs.readdirSync(`./events/${dirs}`).filter(file => file.endsWith('.js'));
+
+        for (const file of event_files) {
+            const event = require(`../events/${dirs}/${file}`);
+            const event_name = file.split('.')[0];
+            client.on(event_name, event.bind(null, Discord, client));
+        }
+    }
+
+    ['client', 'guild'].forEach(e => load_dir(e));
+}

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:92fee5e1aeb934beda8135aad6e45e7ba20b39ea70bcde8505048d237a310a76
-size 431
+const mongoose = require("mongoose");
+
+const profileSchema = new mongoose.Schema({
+    user: { type: String, require: true },
+    userID: { type: String, require: true, unique: true },
+    serverID: { type: String, require: true },
+    coins: { type: Number, default: 1000 },
+    bank: { type: Number },
+    xp: { type: Number }
+});
+
+const model = mongoose.model("ProfileModels", profileSchema);
+module.exports = model;

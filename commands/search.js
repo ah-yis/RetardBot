@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e9c3b96b46ec66b0d43d55b394cd5802e508d147fe66c2b3aac44ecd1c45685
-size 974
+const profileModel = require("../models/profileSchema");
+
+const beggingResponses = [
+    "You searched between your couch and found $",
+    "You searched inside some guys car and found $",
+    "You searched in your own car and found like $",
+    "You found some cash in your wallet, like $",
+    "You checked your pockets and found $",
+];
+
+module.exports = {
+    name: "search",
+    aliases: [],
+    description: "Screw you guys I'm going home",
+    async execute(client, message, args, cmd, Discord, profileData) {
+        const totallyLegitPaycheck = Math.floor(Math.random() * 15) + 1;
+        const begMessage = beggingResponses[Math.floor(Math.random() * beggingResponses.length)];
+
+        const response = await profileModel.findOneAndUpdate(
+            { userID: message.author.id },
+            { $inc: { coins: +totallyLegitPaycheck } }
+        );
+
+        return message.channel.send(`${begMessage} ${totallyLegitPaycheck}`);
+    },
+};

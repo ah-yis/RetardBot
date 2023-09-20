@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:11823c3d9c938a04c509ced3d94d388d9df4a7100b2880afa63a182eb8696b47
-size 438
+const profileModel = require('../../models/profileSchema');
+
+module.exports = async (client, discord, member) => {
+    try {
+        await profileModel.create({
+            user: member,
+            userID: member.id,
+            serverID: member.guild.id,
+            coins: 1000,
+            bank: 0,
+            xp: 0,
+        });
+    } catch (error) {
+        console.error('Error creating profile:', error);
+    }
+};

@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dd1bcef5b937f447b800414424c29b59b2807a7e67328975edd566721c29f7b
-size 509
+const Discord = require("discord.js")
+const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]});
+const path = require("path")
+
+module.exports = {
+    name: 'joingeneral',
+    description: "This command bans a member!",
+    execute(message, args){
+        const { voice } = message.member
+
+        if (!voice.channelID){
+            message.reply('you aint in a voice channel noob')
+            return
+        }
+
+        voice.channel.join()
+    }
+}
+
+
+
+
+
+
+
+
+

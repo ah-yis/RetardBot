@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a3e42d565f1f8e671dd17266d60cb56402c8ff3469c48ea823c0e33cb5a5d6af
-size 246
+module.exports = {
+    name: 'dontcare',
+    description: "still dont care",
+    execute(message, args){
+        message.channel.send('https://media.discordapp.net/attachments/820673669625675786/827085969944608788/dont_care.png');
+    }
+}

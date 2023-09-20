@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0af8f21a9eb3a9bbca9e31315a23765f9e3853b9a102bb60f5a65516e7c3687b
-size 496
+module.exports = {
+    name: 'kick',
+    description: "This command kicks a member!",
+    execute(message, args){
+        const target = message.mentions.users.first();
+        if(target){
+            const memberTarget = message.guild.members.cache.get(target.id);
+            memberTarget.kick();
+            message.channel.send("this law breaker has been kicked succesfully");
+        }else{
+            message.channel.send(`you have failed to kick this man`);
+        }
+    }
+}

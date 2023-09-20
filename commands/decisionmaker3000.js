@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9d87c1a923069407c78808ec30814f77ed27e00006730e30d300cfaa0e86bbd1
-size 364
+module.exports = {
+    name: 'decisionmaker3000',
+    description: "random quotes",
+    execute(message, args){
+        const messages = ["HELL YES", "sure", "maybe", "go away", "nah", "not fully sure", "HELL NO"]
+
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+        message.channel.send(randomMessage)
+
+    }
+}
